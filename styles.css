@@ -3,10 +3,6 @@ body {
     font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-em {
-  font-style: normal;
-}
-
 .panel-title,
 figcaption,
 caption {
@@ -173,7 +169,6 @@ h4 {
 /* National Statistics badge */
 
 #badge {
-  height: 70px;
   margin: 10px;
   float: right;
 }
