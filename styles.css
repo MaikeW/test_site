@@ -3,11 +3,19 @@ body {
     font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.toc-content {
+  margin-top: 19px;
+}
+
+.col-md-3 {
+    margin-top: 19px;
+}
+
 .panel-title,
 figcaption,
 caption {
   color: #333333;
-  font-weight: 700;
+  font-weight: 500;
   font-size: large;
 }
 
@@ -35,6 +43,10 @@ a {
   transition: color 0.2s, background-color 0.2s, outline 0.2s;
 }
 
+h1 {
+  font-weight: 400;
+  letter-spacing: -0.5px;
+}
 h4 {
   font-size: x-large;
 }
@@ -47,6 +59,13 @@ h4 {
   text-decoration: none;
   line-height: 1.8;
   height: 62px;
+}
+
+nav:before {
+    background: #0065bd;
+    display: block !important;
+    content: '';
+    height: 7px;
 }
 
 .dropdown-header {
@@ -119,14 +138,14 @@ h4 {
 /* TOC */
 
 .list-group-item.active {
-    background-color: #002d54;
-    border-color: #002d54;
+    background-color: #0065bd;
+    border-color: #0065bd;
 }
 
 .list-group-item.active:focus,
 .list-group-item.active:hover {
-    background-color: #0065bd;
-    border-color: #0065bd;
+    background-color: #002d54;
+    border-color: #002d54;
 }
 
 /* Infobox */
@@ -229,6 +248,85 @@ a:focus {
       white-space: nowrap; /* added line */
       border: 0;
       left: 50%;
+}
+
+abbr[title] {
+  text-decoration: none;
+}
+
+/* print styles */
+@media print {
+
+  /* remove navigation bar and table of contents */
+  nav, #TOC {
+    display: none;
+  }
+
+  /* show URLs */
+  p a[href^="http://"]:after, a[href^="https://"]:after {
+    content: " (" attr(href) ")";
+  }
+  p a[href^="#"]:after {
+    display: none;
+  }
+  p a {
+    word-wrap: break-word;
+  }
+
+  /* display all tab content and remove tabs */
+  .tab-content > .tab-pane {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .nav-tabs {
+    display:none;
+  }
+
+  /* page layout */
+  @page {
+    margin: 2cm 1cm 1cm 1cm;
+  }
+  figure {
+    margin: 16px 0;
+  }
+    /* Triple charts at top */
+  .col-md-4 {
+    width: 33.333333%;
+    float: left;
+  }
+  /* Child poverty panels */
+  .col-md-6 {
+    width: 50%;
+    float: left;
+  }
+
+  /* format headings and text */
+  h2 {
+    page-break-before: always;
+    margin: 12px 0;
+    font-size: xxx-large;
+  }
+  h3 {
+    margin: 12px 0;;
+    font-size: xx-large;
+  }
+  h4 {
+    text-decoration: underline;
+  }
+  p {
+    line-height: 1.5;
+    margin: 12px 0;
+  }
+  .message-text {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-size: x-large;
+    border-bottom: 0;
+  }
+  .infobox-text {
+    border-bottom: 0;
+  }
 }
 
 
