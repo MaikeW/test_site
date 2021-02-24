@@ -3,12 +3,18 @@ body {
     font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.toc-content {
-  margin-top: 19px;
+h1 {
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  margin-bottom: 35px;
 }
 
-.col-md-3 {
-    margin-top: 19px;
+h4 {
+  font-size: x-large;
+}
+
+p {
+  margin-bottom: 16px;
 }
 
 .panel-title,
@@ -30,7 +36,7 @@ p,
 }
 
 table {
-  font-size: 15px;
+  font-size: large;
 }
 
 a {
@@ -43,13 +49,6 @@ a {
   transition: color 0.2s, background-color 0.2s, outline 0.2s;
 }
 
-h1 {
-  font-weight: 400;
-  letter-spacing: -0.5px;
-}
-h4 {
-  font-size: x-large;
-}
 
 /* Navigation bar */
 
@@ -135,6 +134,12 @@ nav:before {
     }
 }
 
+@media (max-width: 768px) {
+  .navbar-fixed-top {
+    position: relative;
+  }
+}
+
 /* TOC */
 
 .list-group-item.active {
@@ -167,17 +172,6 @@ nav:before {
     color: #002d54;
     background-color: #d9effc;
     margin: 16px 0;
-    font-size: large;
-}
-
-/* Notes to self (delete before publication) */
-
-.devnote-text {
-    padding: 8px 32px;
-    margin: 16px 0;
-    background-color: #fac8af;
-    border-left: 8px solid #f47738;
-    border-bottom: 1px solid #f79f73;
     font-size: large;
 }
 
@@ -254,6 +248,24 @@ abbr[title] {
   text-decoration: none;
 }
 
+/* Make existence of tabsets clearer */
+.tab-content {
+  padding: 0 16px;
+  margin: 0 0 20px 0;
+  border-color: #ddd;
+  border-bottom-style: solid;
+  border-right-style: solid;
+  border-left-style: solid;
+  border-width: thin;
+  border-radius: 0 0 4px 4px;
+}
+
+.nav-tabs > li > a {
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: medium ;
+}
+
 /* print styles */
 @media print {
 
@@ -326,6 +338,13 @@ abbr[title] {
   }
   .infobox-text {
     border-bottom: 0;
+  }
+
+  .tab-content {
+    padding: 0;
+    margin: 0;
+    border-style: none;
+    border-color: transparent;
   }
 }
 
