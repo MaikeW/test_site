@@ -225,14 +225,6 @@ a:focus {
     height: 62px;
 }
 
-.skiptarget {
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  float: right;
-}
-
-
 /* Child poverty update panels ---------------------------------------------- */
 
 .panel-body > figcaption {
@@ -291,8 +283,8 @@ footer{
 
 .ds_site-footer{
   background-color:#0065bd;
-  padding-bottom:32px;
-  padding-top:24px;
+  padding-bottom:8px;
+  padding-top:16px;
   margin-top: 32px;
 }
 
