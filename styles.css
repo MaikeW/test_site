@@ -1,3 +1,4 @@
+
 main {
   overflow-x: hidden;
 }
@@ -147,6 +148,7 @@ nav:before {
 @media (max-width: 768px) {
   .navbar-fixed-top {
     position: relative;
+    margin-top: -69px;
   }
 }
 
